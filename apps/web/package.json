@@ -1,25 +1,30 @@
 {
-	"$schema": "https://json.schemastore.org/package",
-	"name": "web",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev --turbo",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
-	},
-	"dependencies": {
-		"@repo/ui": "workspace:*",
-		"next": "14.2.6",
-		"react": "18.3.1",
-		"react-dom": "18.3.1"
-	},
-	"devDependencies": {
-		"@repo/typescript-config": "workspace:*",
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
-		"typescript": "^5"
-	}
+  "$schema": "https://json.schemastore.org/package",
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pages:build": "nlx @cloudflare/next-on-pages@1",
+    "preview": "nr pages:build && wrangler pages dev",
+    "deploy": "nr pages:build && wrangler pages deploy"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "next": "^14.2.13",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5",
+    "@cloudflare/next-on-pages": "^1.13.3",
+    "wrangler": "^3.78.7"
+  }
 }
