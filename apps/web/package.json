@@ -10,7 +10,8 @@
     "lint": "next lint",
     "pages:build": "pnpm exec next-on-pages",
     "preview": "nr pages:build && wrangler pages dev",
-    "deploy": "nr pages:build && wrangler pages deploy"
+    "deploy": "nr pages:build && wrangler pages deploy",
+    "clear": "rm -rf .next && rm -rf .vercel && rm -rf .wrangler && rm -rf .turbo"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",

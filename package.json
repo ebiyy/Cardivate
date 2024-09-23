@@ -6,7 +6,9 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "lefthook": "lefthook",
-    "biome": "biome"
+    "biome": "biome",
+    "clear": "rm -rf .turbo",
+    "clean": "pnpm -r exec rm -rf node_modules && rm -rf node_modules && pnpm store prune"
   },
   "devDependencies": {
     "turbo": "^2.1.2",
