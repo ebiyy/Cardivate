@@ -1,7 +1,18 @@
 import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "via.placeholder.com",
+        port: "",
+        pathname: "/300/**",
+      },
+    ],
+  },
+};
 
 if (process.env.NODE_ENV === "development") {
   await setupDevPlatform();

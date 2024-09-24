@@ -6,3 +6,4 @@ export * from "./Button";
 export * from "./Footer";
 export * from "./Logo";
 export * from "./Instruction";
+export * from "./TaskCard";
